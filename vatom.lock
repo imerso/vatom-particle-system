@@ -1,0 +1,14 @@
+{
+  "id": "particlesystem",
+  "name": "Particle System",
+  "version": "1.0.0",
+  "beta": true,
+  "description": "Create Particle Systems",
+  "longDescription": "Create a number of pre-defined Particle Systems",
+  "configuration": "Select a pre-defined Particle System from Insert -> Objects",
+  "category": "Developer Tools",
+  "businessId": "RpJkUS4spZ",
+  "price": 0,
+  "releaseNotes": "First release",
+  "entrypoint": "https://plugins.vatom.com/RpJkUS4spZ/a1d38b0f69077385002be3cbd21d1d54/plugin.js"
+}
