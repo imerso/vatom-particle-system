@@ -1,5 +1,6 @@
-# VATOM_TEMPLATE_PLUGIN_NAME 🔌
+# VATOM PARTICLE SYSTEMS 🔌
 
+Adds a few pre-defined particle-systems to the Insert -> Objects menu.
 This plugin is designed to be used from within [Vatom Spaces](https://vatom.com).
 
 
