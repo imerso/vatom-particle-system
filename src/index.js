@@ -85,6 +85,48 @@ export default class MyPlugin extends BasePlugin {
             otherUsers: false,
             action: () => this.onPSFountain1Press()
         })
+
+        this.menus.register({
+            id: 'helper1',
+            title: 'Particle System',
+            icon: this.paths.absolute('./icon.svg'),
+            text: 'Helper - Fire',
+            order: 0,
+            section: 'insert-object',
+            adminOnly: false,
+            inAccordion: false,
+            currentUser: false,
+            otherUsers: false,
+            action: () => this.onPSHlp1Press()
+        })
+
+        this.menus.register({
+            id: 'helper2',
+            title: 'Particle System',
+            icon: this.paths.absolute('./icon.svg'),
+            text: 'Helper - Smoke',
+            order: 0,
+            section: 'insert-object',
+            adminOnly: false,
+            inAccordion: false,
+            currentUser: false,
+            otherUsers: false,
+            action: () => this.onPSHlp2Press()
+        })
+
+        this.menus.register({
+            id: 'helper3',
+            title: 'Particle System',
+            icon: this.paths.absolute('./icon.svg'),
+            text: 'Helper - Rain',
+            order: 0,
+            section: 'insert-object',
+            adminOnly: false,
+            inAccordion: false,
+            currentUser: false,
+            otherUsers: false,
+            action: () => this.onPSHlp3Press()
+        })
     }
 
 
@@ -306,7 +348,7 @@ export default class MyPlugin extends BasePlugin {
                 type:'particles',
                 scale:1,
                 x:pos.x,
-                height:pos.y + 10,
+                height:pos.y + 2,
                 y:pos.z,
                 particle_emitter_type: 'Hemisphere',
                 particle_capacity: 10000,
@@ -346,4 +388,63 @@ export default class MyPlugin extends BasePlugin {
             });
         });
      }
+
+
+    // Helper 'fire'
+    onPSHlp1Press() {
+        let _this = this;
+        this.user.getPosition().then((pos) =>
+        {
+            this.objects.create({
+                name: 'helper - fire',
+                type:'particles',
+                particle_helper: 'fire',
+                scale:1,
+                x:pos.x,
+                height:pos.y,
+                y:pos.z,
+                temporary:false, collide:false, clientOnly:false }).then((obj) =>
+            {
+            });
+        });
+     }
+
+    // Helper 'smoke'
+    onPSHlp2Press() {
+        let _this = this;
+        this.user.getPosition().then((pos) =>
+        {
+            this.objects.create({
+                name: 'helper - smoke',
+                type:'particles',
+                particle_helper: 'smoke',
+                scale:1,
+                x:pos.x,
+                height:pos.y,
+                y:pos.z,
+                temporary:false, collide:false, clientOnly:false }).then((obj) =>
+            {
+            });
+        });
+     }
+
+    // Helper 'rain'
+    onPSHlp3Press() {
+        let _this = this;
+        this.user.getPosition().then((pos) =>
+        {
+            this.objects.create({
+                name: 'helper - rain',
+                type:'particles',
+                particle_helper: 'rain',
+                scale:1,
+                x:pos.x,
+                height:pos.y,
+                y:pos.z,
+                temporary:false, collide:false, clientOnly:false }).then((obj) =>
+            {
+            });
+        });
+     }
+
 }
